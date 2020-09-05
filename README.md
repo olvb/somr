@@ -14,9 +14,9 @@ As in a regular SOM, the learning rate *α* defines how strongly unit weights wi
 
 The spread threshold *τ1* determines until when a map should spread, in relation with the quantization error of its units. The quantization error of a unit is the cumulated difference between its weight vector and the weight vectors of all the training items mapped to this unit. A map will keep spreading until the mean quantization error of its units does not exceed a percentage of the error of the parent unit to which it is attached, and this percentage is represented by the spreading threshold.
 
-Similarly, a map will create and attach child maps to each of its units that has a quantization error higher than a percentage - the depth threshold*τ2* - of the error of the virtual root unit to which belongs the uppermost map. The weights of this root unit is actually set to the average vector of the training set.
+Similarly, a map will create and attach child maps to each of its units that has a quantization error higher than a percentage - the depth threshold *τ2* - of the error of the virtual root unit to which belongs the uppermost map. The weights of this root unit are actually set to the average vector of the training set.
 
-In order to preserve the usefulness of the resulting topography as a visualization tool, child maps have to be oriented so as to have their border units match the neighbors of the parent unit. This is done by initializing the model weights in the child map not with random values but rather center on the mean parent weight plus the average deviation of the relevant neighbors for each of the units in the 2x2 child map.
+In order to preserve the usefulness of the resulting topography as a visualization tool, child maps have to be oriented so as to have their border units match the neighbors of the parent unit. This is done by initializing the model weights in the child map not with random values, but rather center on the mean parent weight plus the average deviation of the relevant neighbors for each of the units in the 2x2 child map.
 
 ## Results
 
